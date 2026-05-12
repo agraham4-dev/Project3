@@ -5,7 +5,7 @@ int main(){
     FILE *bf; //stands for binary file
     bf = fopen("binary.out", "r"); //opens with read
     if(bf==NULL){
-        exit(-1); //exit immediately as the memory failed to allocate
+        exit(-1); //exit immediately as the file failed to open
     }
     fseek(bf, 0L, SEEK_END); //Goes to the end of the file
     int len = ftell(bf); //Checks the length
